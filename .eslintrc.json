@@ -1,4 +1,12 @@
 {
+    "settings": {
+        "import/resolver": {
+          "typescript": {},
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true
@@ -13,9 +21,13 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        
+        "jasmine"
     ],
     "rules": {
-        "import/prefer-default-export" : 1
+        "import/prefer-default-export" : 0,
+        "import/extensions" : 0,
+        "no-console" : 0
     }
 }
