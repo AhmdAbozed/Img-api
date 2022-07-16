@@ -6,7 +6,12 @@ import { app } from "../server.js";
 
 const fsPromises = fs.promises;
 const request = supertest(app);
+/*
+  To test the image processing:
+   An image is sent to the endpoint with a defined size,
+   then the test checks to see if a new resized img with the expected name is created
 
+*/
 describe("img resizing functions: ", () => {
   it("resize img", async () => {
     const file = await fsPromises.readFile(`./images/testImgs/testingImg.jpg`);
