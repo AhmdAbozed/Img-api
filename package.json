@@ -7,8 +7,11 @@
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.13",
     "jasmine-spec-reporter": "^7.0.0",
     "eslint": "^8.19.0",
+    "eslint-import-resolver-typescript": "^3.2.6",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -31,9 +34,6 @@
     "runAll": "npm run pr-es && npm run test && nodemon ./build/server.js"
   },
   "dependencies": {
-    "@types/body-parser": "^1.19.2",
-    "@types/express": "^4.17.13",
-    "eslint-import-resolver-typescript": "^3.2.6",
     "esm": "^3.2.25",
     "express": "^4.18.1",
     "sharp": "^0.30.7"

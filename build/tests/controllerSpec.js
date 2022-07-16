@@ -40,6 +40,12 @@ import supertest from "supertest";
 import { app } from "../server.js";
 var fsPromises = fs.promises;
 var request = supertest(app);
+/*
+  To test the image processing:
+   An image is sent to the endpoint with a defined size,
+   then the test checks to see if a new resized img with the expected name is created
+
+*/
 describe("img resizing functions: ", function () {
     it("resize img", function () { return __awaiter(void 0, void 0, void 0, function () {
         var file;

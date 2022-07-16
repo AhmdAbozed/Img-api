@@ -1,4 +1,5 @@
-import express from "express";
+// import express from "express";
+import * as express from "express";
 import { resizeImg } from "../controllers/imgResize.js";
 var catalog = express.Router();
 catalog.get("/img", function (req, res) {

@@ -36,6 +36,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 import fs, { existsSync } from "fs";
 import sharp from "sharp";
+/*
+  The structure of the function:
+   -It checks to see if width and height are numbers
+   -then checks cache for expected resized img, instead of processing, in which case code ends.
+   -if not, it checks to see if the img to be resized exists or not
+   -then resizes the img and caches it in a local directory, then sends it in a response
+   
+  Processed images are saved to ProcessedImgs folder inside images folder
+*/
 function resizeImg(source, x, y, req1, res1) {
     return __awaiter(this, void 0, void 0, function () {
         var resize, img;
@@ -70,7 +79,7 @@ function resizeImg(source, x, y, req1, res1) {
                     res1.end(img);
                     return [3 /*break*/, 6];
                 case 5:
-                    res1.end("Img doesnt exist");
+                    res1.end("Img doesn't exist");
                     _a.label = 6;
                 case 6: return [3 /*break*/, 8];
                 case 7:

@@ -1,7 +1,15 @@
 import fs, { existsSync } from "fs";
 import http from "http";
 import sharp from "sharp";
-
+/*
+  The structure of the function:
+   -It checks to see if width and height are numbers
+   -then checks cache for expected resized img, instead of processing, in which case code ends.
+   -if not, it checks to see if the img to be resized exists or not
+   -then resizes the img and caches it in a local directory, then sends it in a response
+   
+  Processed images are saved to ProcessedImgs folder inside images folder
+*/
 async function resizeImg(
   source: string,
   x: string,
@@ -28,7 +36,7 @@ async function resizeImg(
       const img = await resize.toBuffer();
       res1.writeHead(200, { "Content-Type": "image/jpeg" });
       res1.end(img);
-    } else res1.end("Img doesnt exist");
+    } else res1.end("Img doesn't exist");
   } else res1.end("Invalid URL parameters");
 }
 
