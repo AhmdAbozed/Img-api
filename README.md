@@ -4,8 +4,8 @@
 Image processing api, where an img is resized according to url parameters.
 
 ### Usage:
- Simply add the img name as well as the required width/height
- The endpoint is set as: /img/imgname/width-height with port 3000
+ Simply add the img name as well as the required width/height\
+ The endpoint is set as: /img/imgname/width-height with port 3000\
  An example: http://localhost:3000/img/fjord/500-333
 
 ### scripts:
