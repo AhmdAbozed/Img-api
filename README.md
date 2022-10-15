@@ -1,8 +1,8 @@
-#  Landing Page Project.
+#  Img processing API.
 
 ### Project description:
-Image processing api, where an img is resized according to url parameters.
-
+- Image processing api, where an img is resized according to url parameters.
+- A project for udacity's professional web dev course.
 ### Usage:
  Simply add the img name as well as the required width/height\
  The endpoint is set as: /img/imgname/width-height with port 3000\
